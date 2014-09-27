@@ -1,0 +1,16 @@
+package net.thesahara.engine.displays;
+
+import net.thesahara.engine.util.TextureHandler;
+
+import org.newdawn.slick.opengl.Texture;
+
+public class DisplaySplash {
+	
+	private Texture splashtexture;
+	
+	public DisplaySplash(){
+		splashtexture = TextureHandler.loadTexture("splash", "startup_splash", "PNG");
+	}
+	
+
+}

@@ -1,0 +1,14 @@
+package net.thesahara.engine.displays;
+
+import net.thesahara.engine.render.TextureStorage;
+
+public class DisplaySplash {
+	
+	public static void drawSplashScreen(){
+		Texture texture = TextureStorage.test2;
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,10 @@
+package net.thesahara.engine.displays;
+
+import org.newdawn.slick.opengl.Texture;
+
+public class DisplaySplash {
+	
+	private Texture splashtexture;
+	
+
+}

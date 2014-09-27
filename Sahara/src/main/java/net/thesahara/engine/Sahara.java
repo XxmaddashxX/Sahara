@@ -2,6 +2,10 @@ package net.thesahara.engine;
 
 
 import static org.lwjgl.opengl.GL11.*;
+
+import java.util.concurrent.TimeUnit;
+
+import net.thesahara.engine.displays.DisplaySplash;
 import net.thesahara.engine.render.TextureStorage;
 import net.thesahara.engine.util.TextureHandler;
 import net.thesahara.game.SaharaProps;
@@ -11,7 +15,6 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
-import org.newdawn.slick.opengl.Texture;
 
 public class Sahara {
 
@@ -36,6 +39,7 @@ public class Sahara {
 		}
 		initializeGL();
 		TextureStorage.loadTextures();
+		displaySplashs();
 		while (!Display.isCloseRequested()) {
 			input();
 			update();
@@ -70,13 +74,24 @@ public class Sahara {
 	private static void render(){
 		glClear(GL_COLOR_BUFFER_BIT);
 		glLoadIdentity();
-		TextureHandler.drawTexture(TextureStorage.testTexture, 20, 20);
+		TextureHandler.drawTexture(TextureStorage.test_Texture, 20, 20);
+		
 		Display.update();
 	}
 	private static void update(){
 		
 	}
-	
+	private static void displaySplashs(){
+		glClear(GL_COLOR_BUFFER_BIT);
+		glLoadIdentity();
+		DisplaySplash.drawSplashScreen();
+		Display.update();
+		try {
+			TimeUnit.SECONDS.sleep(5);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 
 }
