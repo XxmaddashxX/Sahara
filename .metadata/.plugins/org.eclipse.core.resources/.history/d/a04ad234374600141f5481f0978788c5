@@ -1,0 +1,11 @@
+package net.thesahara.engine.render;
+
+public class Frame {
+	
+	public boolean render(){
+		
+		return false;
+		
+	}
+
+}

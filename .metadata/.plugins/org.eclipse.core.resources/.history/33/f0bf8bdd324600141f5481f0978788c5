@@ -1,0 +1,16 @@
+package net.thesahara.engine.util;
+
+import java.io.FileInputStream;
+
+import org.newdawn.slick.opengl.Texture;
+import org.newdawn.slick.opengl.TextureLoader;
+
+public class TextureHandler {
+	
+	
+	public static Texture loadTexture(String key, String format){
+		TextureLoader.getTexture(format, new FileInputStream(new File("src/main/resources/assets/sahara/textures/" + key + format)));
+	}
+	
+	
+}

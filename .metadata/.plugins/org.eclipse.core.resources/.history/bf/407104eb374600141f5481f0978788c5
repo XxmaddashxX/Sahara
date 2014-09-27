@@ -1,0 +1,54 @@
+package net.thesahara.engine;
+
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.ByteBuffer;
+
+import javax.imageio.ImageIO;
+
+import net.thesahara.game.SaharaProps;
+
+import org.lwjgl.LWJGLException;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.DisplayMode;
+
+
+public class Sahara {
+
+	
+	public Sahara(){
+		
+	}
+	
+	public static void start() {
+		try {
+			Display.setDisplayMode(new DisplayMode(800,600));
+			Display.setResizable(true);
+			
+			Display.setTitle("Sahara " + SaharaProps.VERSION);
+			ByteBuffer[] list = new ByteBuffer[2];
+			list[0] = creatBuffer(ImageIO.read(new File("src/main/resources/assets/sahara/icon/programicon.png")));
+			list[1] = creatBuffer(ImageIO.read(new File("src/main/resources/assets/sahara/icon/programicon.png")));
+			Display.setIcon(list);	
+			Display.create();
+		} catch (LWJGLException e) {
+			e.printStackTrace();
+			System.exit(0);
+		}
+
+
+
+		while (!Display.isCloseRequested()) {
+
+
+
+			Display.update();
+		}
+
+		Display.destroy();
+	}
+	
+
+
+}

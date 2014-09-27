@@ -1,0 +1,5 @@
+package net.thesahara.engine.object;
+
+public class GameObject {
+
+}

@@ -1,0 +1,80 @@
+package net.thesahara.engine;
+
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.ByteBuffer;
+
+import javax.imageio.ImageIO;
+
+import net.thesahara.engine.util.AssetLocation;
+import net.thesahara.engine.util.DomainDefault;
+import net.thesahara.engine.util.OSGetter;
+import net.thesahara.game.SaharaProps;
+
+import org.lwjgl.LWJGLException;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.DisplayMode;
+
+
+public class Sahara {
+
+	private static DomainDefault domainDefault;
+	public Sahara(){
+		
+	}
+	
+	public static void start() {
+		try {
+			Display.setDisplayMode(new DisplayMode(800,600));
+			Display.setResizable(true);
+			
+			Display.setTitle("Sahara " + SaharaProps.VERSION);
+			OSGetter.EnumOS enumos = OSGetter.getOSType();
+
+			if (enumos != OSGetter.EnumOS.OSX){
+				try {
+					InputStream inputstream = domainDefault.func_152780_c(new AssetLocation(""));
+					Display.setIcon(new ByteBuffer[] {this.createBuffer(inputstream)});
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+				
+				Display.create();
+		} catch (LWJGLException e) {
+			e.printStackTrace();
+			System.exit(0);
+		}
+
+
+
+		while (!Display.isCloseRequested()) {
+
+
+
+			Display.update();
+		}
+
+		Display.destroy();
+	}
+	private static ByteBuffer createBuffer(InputStream stream) throws IOException
+    {
+        BufferedImage bufferedimage = ImageIO.read(stream);
+        int[] aint = bufferedimage.getRGB(0, 0, bufferedimage.getWidth(), bufferedimage.getHeight(), (int[])null, 0, bufferedimage.getWidth());
+        ByteBuffer bytebuffer = ByteBuffer.allocate(4 * aint.length);
+        int[] aint1 = aint;
+        int i = aint.length;
+
+        for (int j = 0; j < i; ++j)
+        {
+            int k = aint1[j];
+            bytebuffer.putInt(k << 8 | k >> 24 & 255);
+        }
+
+        bytebuffer.flip();
+        return bytebuffer;
+    }
+
+
+}
