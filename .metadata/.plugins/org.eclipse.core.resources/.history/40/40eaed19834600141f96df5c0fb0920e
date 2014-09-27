@@ -5,11 +5,6 @@ import net.thesahara.engine.util.TextureHandler;
 
 import org.newdawn.slick.opengl.Texture;
 
-/**
- *The Sahara - DisplaySplash.java
- *@author Greg
- *
- */
 public class DisplaySplash {
 	
 	public static void drawSplashScreen(){

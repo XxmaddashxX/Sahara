@@ -9,11 +9,6 @@ import org.newdawn.slick.opengl.TextureLoader;
 
 import static org.lwjgl.opengl.GL11.*;
 
-/**
- *The Sahara - TextureHandler.java
- *@author Greg
- *
- */
 public class TextureHandler {
 
 

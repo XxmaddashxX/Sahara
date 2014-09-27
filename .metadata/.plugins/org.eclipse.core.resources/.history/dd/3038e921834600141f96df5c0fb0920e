@@ -6,11 +6,6 @@ import net.thesahara.engine.util.TextureHandler;
 
 import org.newdawn.slick.opengl.Texture;
 
-/**
- *The Sahara - TextureStorage.java
- *@author Greg
- *
- */
 public class TextureStorage {
 	
 	public static Texture test_Texture;
