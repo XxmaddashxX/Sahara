@@ -20,49 +20,31 @@ public class Player extends PlayerBase{
 		this.setPlayerSpeed(10);
 		this.textheight = texture.getImageHeight();
 		this.textwidth = texture.getImageWidth();
-
+		
 	}
 
-
+	
 	@Override
 	public void moveUp() {
-		if(0 > this.getPlayerY() - this.textheight + this.getPlayerSpeed()){
-			
-		}
-		else{
-			this.setPlayerY(this.getPlayerY() - this.getPlayerSpeed());
-
-		}
+		this.setPlayerY(this.getPlayerY() - this.getPlayerSpeed());
 	}
 
-
+	
 	@Override
 	public void moveDown() {
-		if(Display.getHeight() < this.getPlayerY() + this.textheight + this.getPlayerSpeed()){
-
-		}
-		else{
-			this.setPlayerY(this.getPlayerY() + this.getPlayerSpeed());
-
-		}
+		this.setPlayerY(this.getPlayerY() + this.getPlayerSpeed());
 	}
 
-
+	
 	@Override
 	public void moveLeft() {
-		if(0 > this.getPlayerX() - this.getPlayerSpeed()){
-
-		}
-		else{
-			this.setPlayerX(this.getPlayerX() - this.getPlayerSpeed());
-
-		}
+		this.setPlayerX(this.getPlayerX() - this.getPlayerSpeed());
 	}
 
 	@Override
 	public void moveRight() {
 		if(Display.getWidth() < this.getPlayerX()+ this.textwidth + this.getPlayerSpeed()){
-
+			
 		}
 		else{
 			this.setPlayerX(this.getPlayerX() + this.getPlayerSpeed());
@@ -70,7 +52,7 @@ public class Player extends PlayerBase{
 	}
 
 
-
+	
 	@Override
 	public void onUpdate() {
 		if(this.getPlayerHealth() < this.getMaxHealth() / 2){
@@ -81,7 +63,7 @@ public class Player extends PlayerBase{
 			this.setDead(true);
 			this.setCanMove(false);
 		}
-
+		
 	}
 
 }

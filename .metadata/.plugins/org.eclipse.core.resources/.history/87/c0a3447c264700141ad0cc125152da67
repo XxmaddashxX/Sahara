@@ -66,7 +66,7 @@ public class Sahara {
 		
 		civ.setPlayerX(50);
 		civ.setPlayerY(50);
-		player = new Player("Test", TextureStorage.test_Texture);
+		player = new Player("Test");
 		
 		player.setPlayerX(50);
 		player.setPlayerY(50);
@@ -77,7 +77,7 @@ public class Sahara {
 			input();
 			update();
 			render();
-			
+
 
 			
 		}

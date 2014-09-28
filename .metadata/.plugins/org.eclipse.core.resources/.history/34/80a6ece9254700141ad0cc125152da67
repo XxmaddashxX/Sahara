@@ -44,7 +44,7 @@ public class Civilian extends CivBase{
 
 	@Override
 	public void moveRight() {
-		
+		if(Display.getWidth() < this.getPlayerX()+ TextureStorage.test3.getImageWidth() + this.getPlayerSpeed())
 		this.setPlayerX(this.getPlayerX() + this.getPlayerSpeed());
 	}
 

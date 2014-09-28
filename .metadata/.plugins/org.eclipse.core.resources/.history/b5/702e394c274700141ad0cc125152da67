@@ -26,8 +26,8 @@ public class Player extends PlayerBase{
 
 	@Override
 	public void moveUp() {
-		if(0 > this.getPlayerY() - this.textheight + this.getPlayerSpeed()){
-			
+		if(Display.getHeight() < this.getPlayerY() - this.getPlayerSpeed()){
+
 		}
 		else{
 			this.setPlayerY(this.getPlayerY() - this.getPlayerSpeed());

@@ -77,7 +77,7 @@ public class Sahara {
 			input();
 			update();
 			render();
-			
+			System.out.println(player.getPlayerY());
 
 			
 		}
