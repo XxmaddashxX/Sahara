@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package net.thesahara.game.player;
+
+/**
+ *The Sahara - Enemy.java
+ *@author Greg
+ *
+ */
+public class Enemy {
+
+}

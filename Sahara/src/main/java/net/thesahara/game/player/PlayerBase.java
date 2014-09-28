@@ -21,8 +21,20 @@ public abstract class PlayerBase {
 	public static String playerName;
 	public static int maxHealth;
 	public static boolean isDead;
+	public static int direction;
 	
-	
+	public int getDirection() {
+		return direction;
+	}
+
+
+
+	public void setDirection(int direction) {
+		PlayerBase.direction = direction;
+	}
+
+
+
 	public PlayerBase(){
 
 	}

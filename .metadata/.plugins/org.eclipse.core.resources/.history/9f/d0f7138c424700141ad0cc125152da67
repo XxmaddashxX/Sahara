@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package net.thesahara.game.player;
+
+/**
+ *The Sahara - Enemy.java
+ *@author Greg
+ *
+ */
+public class Enemy extends EnemyBase{
+
+	public Enemy(String name){
+		
+	}
+	
+	
+	@Override
+	public void moveUp() {
+		
+		
+	}
+
+	
+	@Override
+	public void moveDown() {
+		
+	}
+
+	
+	@Override
+	public void moveLeft() {
+		
+	}
+
+	
+	@Override
+	public void moveRight() {
+		
+	}
+
+	
+	@Override
+	public void onUpdate() {
+		
+	}
+
+}

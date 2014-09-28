@@ -5,9 +5,8 @@ package net.thesahara.game.player;
 
 import java.util.Random;
 
-import net.thesahara.engine.render.TextureStorage;
-
 import org.lwjgl.opengl.Display;
+import org.newdawn.slick.opengl.Texture;
 
 /**
  *The Sahara - Civilian.java
@@ -15,38 +14,64 @@ import org.lwjgl.opengl.Display;
  *
  */
 public class Civilian extends CivBase{
-	
+	public  int textwidth;
+	public  int textheight;
 	private Random rand = new Random();
-	public Civilian(String name){
+	public Civilian(String name, Texture texture){
 		this.setPlayerHealth(100);
 		this.setPlayerSpeed(10);
 		this.setPlayerName(name);
+		this.textwidth = texture.getImageWidth();
+		this.textheight = texture.getImageHeight();		
 		
 	}
 
 	
 	@Override
 	public void moveUp() {
-		this.setPlayerY(this.getPlayerY() - this.getPlayerSpeed());
+		if(0 > this.getPlayerY() - this.textheight + this.getPlayerSpeed()){
+			
+		}
+		else{
+			this.setPlayerY(this.getPlayerY() - this.getPlayerSpeed());
+
+		}
 	}
 
-	
+
 	@Override
 	public void moveDown() {
-		this.setPlayerY(this.getPlayerY() + this.getPlayerSpeed());
+		if(Display.getHeight() < this.getPlayerY() + this.textheight + this.getPlayerSpeed()){
+
+		}
+		else{
+			this.setPlayerY(this.getPlayerY() + this.getPlayerSpeed());
+
+		}
 	}
 
-	
+
 	@Override
 	public void moveLeft() {
-		this.setPlayerX(this.getPlayerX() - this.getPlayerSpeed());
+		if(0 > this.getPlayerX() - this.getPlayerSpeed()){
+
+		}
+		else{
+			this.setPlayerX(this.getPlayerX() - this.getPlayerSpeed());
+
+		}
 	}
 
 	@Override
 	public void moveRight() {
-		
-		this.setPlayerX(this.getPlayerX() + this.getPlayerSpeed());
+		if(Display.getWidth() < this.getPlayerX()+ this.textwidth + this.getPlayerSpeed()){
+
+		}
+		else{
+			this.setPlayerX(this.getPlayerX() + this.getPlayerSpeed());
+		}
 	}
+
 
 
 

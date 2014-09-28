@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package net.thesahara.game.logic;
+
+import net.thesahara.game.player.Enemy;
+import net.thesahara.game.player.Player;
+
+/**
+ *The Sahara - LineOfSight.java
+ *@author Greg
+ *
+ */
+public class LineOfSight {
+	
+	
+	
+	public static boolean canSee(Enemy enemy, Player player){
+		if(player.getPlayerX() < enemy.getPlayerX() + 50 && player.getPlayerX() > enemy.getPlayerX() - 50){
+			if(player.getPlayerY() < enemy.getPlayerY() + 50 && player.getPlayerY() > enemy.getPlayerY() - 50){
+				return true;
+		
+			}
+		}
+		
+		return false;
+		
+	}
+
+}
