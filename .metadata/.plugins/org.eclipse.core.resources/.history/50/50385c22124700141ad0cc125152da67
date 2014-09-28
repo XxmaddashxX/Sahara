@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package net.thesahara.game.player;
+
+/**
+ *The Sahara - CivBase.java
+ *@author Greg
+ *
+ */
+public class CivBase {
+
+}

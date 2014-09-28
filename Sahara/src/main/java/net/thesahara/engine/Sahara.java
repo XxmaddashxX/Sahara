@@ -22,6 +22,7 @@ import net.thesahara.engine.displays.DisplaySplash;
 import net.thesahara.engine.render.TextureStorage;
 import net.thesahara.engine.util.TextureHandler;
 import net.thesahara.game.SaharaProps;
+import net.thesahara.game.player.Civilian;
 import net.thesahara.game.player.Player;
 
 import org.lwjgl.LWJGLException;
@@ -37,8 +38,9 @@ import org.lwjgl.opengl.GL11;
  *
  */
 public class Sahara {
-
+	public static Civilian civ;
 	public static Player player;
+	
 	public Sahara(){
 		
 	}
@@ -60,9 +62,16 @@ public class Sahara {
 		initializeGL();
 		TextureStorage.loadTextures();
 		displaySplashs();
+		civ = new Civilian("t");
+		
+		civ.setPlayerX(50);
+		civ.setPlayerY(50);
 		player = new Player("Test");
+		
 		player.setPlayerX(50);
 		player.setPlayerY(50);
+		
+		
 		while (!Display.isCloseRequested()) {
 			
 			input();
@@ -113,12 +122,13 @@ public class Sahara {
 	private static void render(){
 		glClear(GL_COLOR_BUFFER_BIT);
 		glLoadIdentity();
-		TextureHandler.drawTexture(TextureStorage.test_Texture, player.getPlayerX(), player.getPlayerY());
+		TextureHandler.drawTexture(TextureStorage.test3, civ.getPlayerX(),civ.getPlayerY());
 		
+		TextureHandler.drawTexture(TextureStorage.test_Texture, player.getPlayerX(), player.getPlayerY());
 		Display.update();
 	}
 	private static void update(){
-		
+		civ.onUpdate();
 	}
 	private static void displaySplashs(){
 		glClear(GL_COLOR_BUFFER_BIT);
