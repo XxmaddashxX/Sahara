@@ -18,7 +18,7 @@ public class Enemy extends EnemyBase{
 	public int textwidth, textheight;
 	public Enemy(String name, Texture texture, Player player){
 		this.setPlayerName(name);
-		this.setPlayerSpeed(5);
+		this.setPlayerSpeed(2);
 		this.textheight = texture.getImageHeight();
 		this.textwidth = texture.getImageWidth();
 				

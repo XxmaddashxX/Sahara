@@ -22,6 +22,7 @@ import net.thesahara.engine.displays.DisplaySplash;
 import net.thesahara.engine.render.TextureStorage;
 import net.thesahara.engine.util.TextureHandler;
 import net.thesahara.game.SaharaProps;
+import net.thesahara.game.logic.threads.ShootingThread;
 import net.thesahara.game.player.Civilian;
 import net.thesahara.game.player.Enemy;
 import net.thesahara.game.player.Player;
@@ -42,7 +43,10 @@ public class Sahara {
 	public static Civilian civ;
 	public static Player player;
 	public static Enemy enemy;
-	public static boolean shoot;
+	public static Enemy enemy2;
+	public static boolean testing;
+	public static Shooting shoot;
+	
 	public static int i;
 	public Sahara(){
 		 i = 0;
@@ -67,17 +71,20 @@ public class Sahara {
 		TextureStorage.loadTextures();
 		displaySplashs();
 		civ = new Civilian("t", TextureStorage.balkoose_pur_naked);
-		
+		shoot = new Shooting("y");
 		civ.setPlayerX(50);
 		civ.setPlayerY(50);
 		player = new Player("Test", TextureStorage.balkoose_pur_clothed);
-		
 		player.setPlayerX(50);
 		player.setPlayerY(50);
 		player.setDirection(0);
 		enemy = new Enemy("bob", TextureStorage.icon, player);
 		enemy.setPlayerX(500);
 		enemy.setPlayerY(500);
+		enemy2 = new Enemy("bob2", TextureStorage.balkoose_smuggler, player);
+		enemy2.setPlayerX(400);
+		enemy2.setPlayerY(400);
+		
 		while (!Display.isCloseRequested()) {
 			
 			input();
@@ -123,6 +130,8 @@ public class Sahara {
 				player.setDirection(0);
 			}
 			if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
+				Shooting.setDir(player);
+				Shooting.isVisible = true;
 				
 				
 			}
@@ -139,11 +148,19 @@ public class Sahara {
 		TextureHandler.drawTexture(TextureStorage.balkoose_pur_naked, civ.getPlayerX(),civ.getPlayerY());
 		TextureHandler.drawTexture(TextureStorage.icon, enemy.getPlayerX(), enemy.getPlayerY());
 		TextureHandler.drawTexture(TextureStorage.balkoose_pur_clothed, player.getPlayerX(), player.getPlayerY());
+		TextureHandler.drawTexture(TextureStorage.balkoose_smuggler, enemy2.getPlayerX(), enemy2.getPlayerY());
+		if(Shooting.isVisible){
+			TextureHandler.drawTexture(TextureStorage.test_Texture, Shooting.posx, Shooting.posy);
+		}
 		Display.update();
 	}
 	private static void update(){
 		civ.onUpdate();
 		enemy.onUpdate();
+		if(Shooting.isVisible){
+			Shooting.fire(player);
+		}
+		//enemy2.onUpdate();
 	}
 	private static void displaySplashs(){
 		glClear(GL_COLOR_BUFFER_BIT);

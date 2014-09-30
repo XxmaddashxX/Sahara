@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package net.thesahara.engine;
+
+import org.lwjgl.opengl.Display;
+
+import net.thesahara.engine.render.TextureStorage;
+import net.thesahara.engine.util.TextureHandler;
+import net.thesahara.game.player.Player;
+
+/**
+ *The Sahara - Shooting.java
+ *@author Greg
+ *
+ */
+public class Shooting {
+	public static String name;
+	public static int posx, posy;
+	public Shooting(String name){
+		this.name = name;
+		
+	}
+	public static void fire(Player player){
+		int dir = player.getDirection();
+		int x = player.getPlayerX();
+		int y = player.getPlayerY();
+		posx = x;
+		posy = y;
+		if(dir == 3){
+			for(int i = posx; i < posx + 150; i++){
+				TextureHandler.drawTexture(TextureStorage.test_Texture, i, posy);
+			}
+		}
+	}
+
+
+}

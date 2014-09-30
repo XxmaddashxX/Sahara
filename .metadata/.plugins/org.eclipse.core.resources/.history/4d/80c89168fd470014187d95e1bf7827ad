@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package net.thesahara.game.logic.threads;
+
+import org.lwjgl.opengl.Display;
+
+import net.thesahara.engine.render.TextureStorage;
+import net.thesahara.engine.util.TextureHandler;
+import net.thesahara.game.player.Player;
+
+/**
+ *The Sahara - ShootingThread.java
+ *@author Greg
+ *
+ */
+public class ShootingThread extends Thread{
+	private static int range = 3;
+	public static void fire(Player player){
+		int r = range * 50;
+		int dir = player.getDirection();
+		if(dir == 0){
+			
+			for(int i = player.getPlayerX(); i < player.getPlayerX() + r; i++){
+				
+				TextureHandler.drawTexture(TextureStorage.test_Texture, player.getPlayerX() + i, player.getPlayerY());
+				Display.update();
+			
+			}
+		}
+	}
+
+}

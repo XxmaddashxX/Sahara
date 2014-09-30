@@ -17,6 +17,7 @@ public class TextureStorage {
 	
 	public static Texture balkoose_pur_naked;
 	public static Texture balkoose_pur_clothed;
+	public static Texture balkoose_smuggler;
 	public static Texture icon;
 	
 	public static Texture splash_START_Texture;
@@ -29,6 +30,7 @@ public class TextureStorage {
 		balkoose_pur_naked = TextureHandler.loadTexture("Balkoose_purple_Naked", "PNG");
 		balkoose_pur_clothed = TextureHandler.loadTexture("Balkoose_purple", "PNG");
 		icon = TextureHandler.loadTexture("Drifitng_Collosus_icon", "PNG");
+		balkoose_smuggler = TextureHandler.loadTexture("Balkoose_smuggler", "PNG");
 		//Splashes
 		//splash_START_Texture = TextureHandler.loadTexture("splahes", "splash_START", "PNG");
 	}

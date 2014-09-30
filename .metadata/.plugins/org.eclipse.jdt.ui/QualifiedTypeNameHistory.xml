@@ -11,13 +11,18 @@
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.opengl.TextureLoader"/>
 <fullyQualifiedTypeName name="net.thesahara.engine.render.Animation"/>
-<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
-<fullyQualifiedTypeName name="net.thesahara.engine.render.TextureStorage"/>
-<fullyQualifiedTypeName name="net.thesahara.engine.util.TextureHandler"/>
-<fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
 <fullyQualifiedTypeName name="net.thesahara.engine.displays.DisplaySplash"/>
 <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
+<fullyQualifiedTypeName name="net.thesahara.game.player.Player"/>
+<fullyQualifiedTypeName name="net.thesahara.engine.util.TextureHandler"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
+<fullyQualifiedTypeName name="net.thesahara.game.player.Enemy"/>
+<fullyQualifiedTypeName name="net.thesahara.game.logic.LineOfSight"/>
+<fullyQualifiedTypeName name="net.thesahara.engine.render.TextureStorage"/>
+<fullyQualifiedTypeName name="net.thesahara.game.logic.threads.ShootingThread"/>
+<fullyQualifiedTypeName name="net.thesahara.engine.Sahara"/>
 </qualifiedTypeNameHistroy>

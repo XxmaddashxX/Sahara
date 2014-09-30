@@ -16,8 +16,8 @@ public class LineOfSight {
 	
 	
 	public static boolean canSee(Enemy enemy, Player player){
-		if(player.getPlayerX() < enemy.getPlayerX() + 100 && player.getPlayerX() > enemy.getPlayerX() - 100){
-			if(player.getPlayerY() < enemy.getPlayerY() + 100 && player.getPlayerY() > enemy.getPlayerY() - 100){
+		if(player.getPlayerX() < enemy.getPlayerX() + 200 && player.getPlayerX() > enemy.getPlayerX() - 200){
+			if(player.getPlayerY() < enemy.getPlayerY() + 200 && player.getPlayerY() > enemy.getPlayerY() - 200){
 				return true;
 		
 			}

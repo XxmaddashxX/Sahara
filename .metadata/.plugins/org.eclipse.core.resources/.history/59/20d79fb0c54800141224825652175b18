@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package net.thesahara.engine;
+
+import org.lwjgl.opengl.Display;
+
+import net.thesahara.engine.render.TextureStorage;
+import net.thesahara.engine.util.TextureHandler;
+import net.thesahara.game.player.Player;
+
+/**
+ *The Sahara - Shooting.java
+ *@author Greg
+ *
+ */
+public class Shooting {
+	public static String name;
+	public static int x, y, dir;
+	public Shooting(String name, int x, int y, int dir){
+		this.name = name;
+		this.x = x;
+		this.y = y;
+		this.dir = dir;
+	}
+
+
+}

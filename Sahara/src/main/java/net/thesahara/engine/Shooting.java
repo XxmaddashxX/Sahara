@@ -15,20 +15,37 @@ import net.thesahara.game.player.Player;
  *
  */
 public class Shooting {
-	private static int range = 3;
-	public static void shoot(Player player){
-		int r = range * 50;
-		int dir = player.getDirection();
-		if(dir == 0){
-			
-			for(int i = player.getPlayerX(); i < player.getPlayerX() + r; i++){
+	private static int log;
+	public static String name;
+	public static int posx, posy;
+	public static int dir;
+	public static boolean isVisible;
+	public Shooting(String name){
+		this.name = name;
+		
+	}
+	public static void setDir(Player player){
+		dir = player.getDirection();
+	}
+	public static void fire(Player player){
+		if(log == 0){
+			posx = player.getPlayerX();
+			posy = player.getPlayerY();
+		}
+		if(log < 150){
+			isVisible = true;
+			if(dir == 3){
+				posx = posx +1; 
+				log = log + 1;
 				
-				TextureHandler.drawTexture(TextureStorage.test_Texture, player.getPlayerX() + i, player.getPlayerY());
-				Display.update();
-			
 			}
 		}
+		else{
+			log = 0;
+			isVisible = false;
+		}
+		
 	}
-	
+
 
 }

@@ -1,0 +1,38 @@
+package net.thesahara.engine.render;
+
+import net.thesahara.engine.util.TextureHandler;
+
+import org.newdawn.slick.opengl.Texture;
+
+/**
+ *The Sahara - TextureStorage.java
+ *@author Greg
+ *
+ */
+public class TextureStorage {
+	
+	public static Texture test_Texture;
+	public static Texture test2;
+	public static Texture test3;
+	
+	public static Texture balkoose_pur_naked;
+	public static Texture balkoose_pur_clothed;
+	public static Texture balkoose_smuggler;
+	public static Texture icon;
+	
+	public static Texture splash_START_Texture;
+	
+	
+	public static void loadTextures(){
+		test_Texture = TextureHandler.loadTexture("programIcon", "PNG");
+		//test2 = TextureHandler.loadTexture("test2", "PNG");
+		test3 = TextureHandler.loadTexture("test2_Texture", "PNG");
+		balkoose_pur_naked = TextureHandler.loadTexture("Balkoose_purple_Naked", "PNG");
+		balkoose_pur_clothed = TextureHandler.loadTexture("Balkoose_purple", "PNG");
+		icon = TextureHandler.loadTexture("Drifitng_Collosus_icon", "PNG");
+		//Splashes
+		//splash_START_Texture = TextureHandler.loadTexture("splahes", "splash_START", "PNG");
+	}
+	
+
+}
