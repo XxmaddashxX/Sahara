@@ -43,19 +43,6 @@ public class Shooting {
 				posx = posx - 5;
 				log = log + 1;
 			}
-			if(dir == 0){
-				posy = posy - 5;
-				log = log + 1;
-			}
-			if(dir == 2){
-				posy = posy + 5;
-				log = log + 1;
-			}
-			if(dir == 4){
-				posx =  posx + 5;
-				posy = posy - 5;
-				log = log + 1;
-			}
 		}
 		else{
 			log = 0;

@@ -117,7 +117,9 @@ public class Sahara {
 			if(Keyboard.isKeyDown(Keyboard.KEY_D)){
 				player.moveRight();
 				player.setDirection(3);
-				
+				if(Keyboard.isKeyDown(Keyboard.KEY_W)){
+					player.setDirection(4);
+				}
 			}
 			if(Keyboard.isKeyDown(Keyboard.KEY_S)){
 				player.moveDown();
@@ -126,7 +128,6 @@ public class Sahara {
 			if(Keyboard.isKeyDown(Keyboard.KEY_A)){
 				player.moveLeft();
 				player.setDirection(1);
-				
 			}
 			if(Keyboard.isKeyDown(Keyboard.KEY_W)){
 				player.moveUp();

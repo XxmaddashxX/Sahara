@@ -16,8 +16,7 @@ public class NameGenerator {
 	private static ArrayList<String> balkooseFirst = new ArrayList<String>();
 	private static ArrayList<String> balkooseLast = new ArrayList<String>();
 	public NameGenerator(){
-		
-	}
+		}
 	public static String getName(String race){
 		addNames();
 		String string1;
@@ -31,7 +30,7 @@ public class NameGenerator {
 	}
 	private static void addNames(){
 		balkooseFirst.add("Bill");balkooseFirst.add("Bob");
-		balkooseLast.add("Lop");balkooseLast.add("Lop");
+		balkooseLast.add("lip");balkooseLast.add("lop");
 	
 	}
 	

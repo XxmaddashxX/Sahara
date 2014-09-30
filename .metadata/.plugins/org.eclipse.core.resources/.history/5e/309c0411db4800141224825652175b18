@@ -31,7 +31,7 @@ public class NameGenerator {
 	}
 	private static void addNames(){
 		balkooseFirst.add("Bill");balkooseFirst.add("Bob");
-		balkooseLast.add("Lop");balkooseLast.add("Lop");
+		balkooseLast.add("lip");balkooseLast.add("lop");
 	
 	}
 	

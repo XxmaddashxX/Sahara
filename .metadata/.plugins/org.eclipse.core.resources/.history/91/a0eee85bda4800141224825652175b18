@@ -22,7 +22,6 @@ import net.thesahara.engine.displays.DisplaySplash;
 import net.thesahara.engine.render.TextureStorage;
 import net.thesahara.engine.util.TextureHandler;
 import net.thesahara.game.SaharaProps;
-import net.thesahara.game.logic.NameGenerator;
 import net.thesahara.game.logic.threads.ShootingThread;
 import net.thesahara.game.player.Civilian;
 import net.thesahara.game.player.Enemy;
@@ -85,7 +84,7 @@ public class Sahara {
 		enemy2 = new Enemy("bob2", TextureStorage.balkoose_smuggler, player);
 		enemy2.setPlayerX(400);
 		enemy2.setPlayerY(400);
-		System.out.println(NameGenerator.getName("Balkoose"));
+		
 		while (!Display.isCloseRequested()) {
 			
 			input();
@@ -117,7 +116,6 @@ public class Sahara {
 			if(Keyboard.isKeyDown(Keyboard.KEY_D)){
 				player.moveRight();
 				player.setDirection(3);
-				
 			}
 			if(Keyboard.isKeyDown(Keyboard.KEY_S)){
 				player.moveDown();
@@ -126,7 +124,6 @@ public class Sahara {
 			if(Keyboard.isKeyDown(Keyboard.KEY_A)){
 				player.moveLeft();
 				player.setDirection(1);
-				
 			}
 			if(Keyboard.isKeyDown(Keyboard.KEY_W)){
 				player.moveUp();

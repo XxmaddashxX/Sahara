@@ -16,10 +16,10 @@ public class NameGenerator {
 	private static ArrayList<String> balkooseFirst = new ArrayList<String>();
 	private static ArrayList<String> balkooseLast = new ArrayList<String>();
 	public NameGenerator(){
-		
+		balkooseFirst.add("Bill");balkooseFirst.add("Bob");
+		balkooseLast.add("lip");balkooseLast.add("lop");
 	}
 	public static String getName(String race){
-		addNames();
 		String string1;
 		String string2;
 		if(race == "Balkoose"){
@@ -28,11 +28,6 @@ public class NameGenerator {
 			return string1 + " " + string2;
 		}
 		return null;
-	}
-	private static void addNames(){
-		balkooseFirst.add("Bill");balkooseFirst.add("Bob");
-		balkooseLast.add("Lop");balkooseLast.add("Lop");
-	
 	}
 	
 }
