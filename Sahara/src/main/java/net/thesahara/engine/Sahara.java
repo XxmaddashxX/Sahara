@@ -170,6 +170,7 @@ public class Sahara {
 		glLoadIdentity();
 		DisplaySplash.drawSplashScreen();
 		Display.update();
+		
 		try {
 			TimeUnit.SECONDS.sleep(5);
 		} catch (InterruptedException e) {

@@ -19,10 +19,13 @@
 <fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
 <fullyQualifiedTypeName name="net.thesahara.game.player.Player"/>
 <fullyQualifiedTypeName name="net.thesahara.engine.util.TextureHandler"/>
-<fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
 <fullyQualifiedTypeName name="net.thesahara.game.player.Enemy"/>
 <fullyQualifiedTypeName name="net.thesahara.game.logic.LineOfSight"/>
 <fullyQualifiedTypeName name="net.thesahara.engine.render.TextureStorage"/>
 <fullyQualifiedTypeName name="net.thesahara.game.logic.threads.ShootingThread"/>
 <fullyQualifiedTypeName name="net.thesahara.engine.Sahara"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="net.thesahara.game.logic.NameGenerator"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

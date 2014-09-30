@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package net.thesahara.engine.logic;
+
+/**
+ *The Sahara - ILog.java
+ *@author Greg
+ *
+ */
+public class ILog {
+
+}
