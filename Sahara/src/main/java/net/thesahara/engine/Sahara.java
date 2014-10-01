@@ -19,11 +19,12 @@ import static org.lwjgl.opengl.GL11.glViewport;
 import java.util.concurrent.TimeUnit;
 
 import net.thesahara.engine.displays.DisplaySplash;
+import net.thesahara.engine.logic.IConsole;
+import net.thesahara.engine.render.TextHandler;
 import net.thesahara.engine.render.TextureStorage;
 import net.thesahara.engine.util.TextureHandler;
 import net.thesahara.game.SaharaProps;
 import net.thesahara.game.logic.NameGenerator;
-import net.thesahara.game.logic.threads.ShootingThread;
 import net.thesahara.game.player.Civilian;
 import net.thesahara.game.player.Enemy;
 import net.thesahara.game.player.Player;
@@ -33,6 +34,8 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
+import org.newdawn.slick.Color;
+import org.newdawn.slick.TrueTypeFont;
 
 
 /**
@@ -47,7 +50,7 @@ public class Sahara {
 	public static Enemy enemy2;
 	public static boolean testing;
 	public static Shooting shoot;
-	
+	public static TrueTypeFont font;
 	public static int i;
 	public Sahara(){
 		 i = 0;
@@ -55,6 +58,7 @@ public class Sahara {
 	
 	public static void start() {
 		try {
+			IConsole.printStartDetails();
 			Display.setDisplayMode(new DisplayMode(800,600));
 			Display.setResizable(true);
 			
@@ -71,6 +75,7 @@ public class Sahara {
 		initializeGL();
 		TextureStorage.loadTextures();
 		displaySplashs();
+		font = TextHandler.loadFont(TextHandler.TIMESNEWROMAN, 24);
 		civ = new Civilian("t", TextureStorage.balkoose_pur_naked);
 		shoot = new Shooting("y");
 		civ.setPlayerX(50);
@@ -155,6 +160,7 @@ public class Sahara {
 		if(Shooting.isVisible){
 			TextureHandler.drawTexture(TextureStorage.test_Texture, Shooting.posx, Shooting.posy);
 		}
+		TextHandler.drawString(font, 60, 60, ";D", Color.magenta);
 		Display.update();
 	}
 	private static void update(){

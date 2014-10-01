@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package net.thesahara.engine.render;
+
+/**
+ *The Sahara - TextHandler.java
+ *@author Greg
+ *
+ */
+public class TextHandler {
+
+}

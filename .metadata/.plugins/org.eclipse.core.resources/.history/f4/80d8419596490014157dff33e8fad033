@@ -19,7 +19,7 @@ public class TextureHandler {
 
 	public static Texture loadTexture(String key, String format){
 		try {
-			return TextureLoader.getTexture(format.toUpperCase(), new FileInputStream(new File("src/main/resources/assets/sahara/textures/" + key + "." + format.toLowerCase())));
+			return TextureLoader.getTexture(format, new FileInputStream(new File("src/main/resources/assets/sahara/textures/" + key + "." + format.toLowerCase())));
 		} catch (IOException e) {
 
 			e.printStackTrace();

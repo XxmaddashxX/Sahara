@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package net.thesahara.engine;
+
+/**
+ *The Sahara - SoundHandler.java
+ *@author Greg
+ *
+ */
+public class SoundHandler {
+
+}

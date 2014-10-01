@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="org.newdawn.slick.opengl.TextureLoader"/>
 <fullyQualifiedTypeName name="net.thesahara.engine.render.Animation"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
-<fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
 <fullyQualifiedTypeName name="net.thesahara.engine.displays.DisplaySplash"/>
 <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
@@ -28,4 +27,11 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="net.thesahara.game.logic.NameGenerator"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="net.thesahara.engine.logic.IConsole"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Font"/>
+<fullyQualifiedTypeName name="java.awt.Font"/>
+<fullyQualifiedTypeName name="net.thesahara.engine.render.TextHandler"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.openal.AudioLoader"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.util.ResourceLoader"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package net.thesahara.engine.util;
+
+/**
+ *The Sahara - SavegameHandler.java
+ *@author Greg
+ *
+ */
+public class SavegameHandler {
+
+}
