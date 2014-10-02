@@ -3,6 +3,9 @@
  */
 package net.thesahara.game.player;
 
+import net.thesahara.engine.render.TextureStorage;
+import net.thesahara.game.player.Clothes.GeneralClothes;
+
 import org.lwjgl.opengl.Display;
 import org.newdawn.slick.opengl.Texture;
 
@@ -20,7 +23,7 @@ public class Player extends PlayerBase{
 		this.setPlayerSpeed(10);
 		this.textheight = texture.getImageHeight();
 		this.textwidth = texture.getImageWidth();
-
+		this.setClothesbottom(new GeneralClothes("trousers_white", TextureStorage.clothes_trousers_white));
 	}
 
 

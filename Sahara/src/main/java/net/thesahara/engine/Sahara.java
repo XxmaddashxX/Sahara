@@ -24,6 +24,7 @@ import net.thesahara.engine.render.TextHandler;
 import net.thesahara.engine.render.TextureStorage;
 import net.thesahara.engine.util.TextureHandler;
 import net.thesahara.game.SaharaProps;
+import net.thesahara.game.logic.ClothesHandler;
 import net.thesahara.game.logic.NameGenerator;
 import net.thesahara.game.player.Civilian;
 import net.thesahara.game.player.Enemy;
@@ -153,14 +154,15 @@ public class Sahara {
 	private static void render(){
 		glClear(GL_COLOR_BUFFER_BIT);
 		glLoadIdentity();
-		TextureHandler.drawTexture(TextureStorage.balkoose_pur_naked, civ.getPlayerX(),civ.getPlayerY());
+		TextureHandler.drawTexture(TextureStorage.balkoose_pur_clothed, civ.getPlayerX(),civ.getPlayerY());
 		TextureHandler.drawTexture(TextureStorage.icon, enemy.getPlayerX(), enemy.getPlayerY());
-		TextureHandler.drawTexture(TextureStorage.balkoose_pur_clothed, player.getPlayerX(), player.getPlayerY());
+		TextureHandler.drawTexture(TextureStorage.balkoose_pur_naked, player.getPlayerX(), player.getPlayerY());
 		TextureHandler.drawTexture(TextureStorage.balkoose_smuggler, enemy2.getPlayerX(), enemy2.getPlayerY());
 		if(Shooting.isVisible){
 			TextureHandler.drawTexture(TextureStorage.test_Texture, Shooting.posx, Shooting.posy);
 		}
 		TextHandler.drawString(font, 60, 60, ";D", Color.magenta);
+		ClothesHandler.drawClothes(player);
 		Display.update();
 	}
 	private static void update(){
@@ -169,7 +171,7 @@ public class Sahara {
 		if(Shooting.isVisible){
 			Shooting.fire(player);
 		}
-		//enemy2.onUpdate();
+		enemy2.onUpdate();
 	}
 	private static void displaySplashs(){
 		glClear(GL_COLOR_BUFFER_BIT);

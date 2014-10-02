@@ -10,17 +10,17 @@ package net.thesahara.game.player;
  */
 public abstract class CivBase {
 	
-	public static int playerX;
-	public static int playerY;
-	public static int playerHealth;
-	public static int playerSpeed;
-	public static boolean canMove;
-	public static boolean isHurt;
-	public static boolean isGodMode;
-	public static String race;
-	public static String playerName;
-	public static int maxHealth;
-	public static boolean isDead;
+	public  int playerX;
+	public  int playerY;
+	public  int playerHealth;
+	public  int playerSpeed;
+	public  boolean canMove;
+	public  boolean isHurt;
+	public  boolean isGodMode;
+	public  String race;
+	public  String playerName;
+	public  int maxHealth;
+	public  boolean isDead;
 	
 	
 	public CivBase(){
@@ -36,7 +36,7 @@ public abstract class CivBase {
 
 
 	public  void setDead(boolean isDead) {
-		CivBase.isDead = isDead;
+		this.isDead = isDead;
 	}
 
 
@@ -46,7 +46,7 @@ public abstract class CivBase {
 	}
 
 	public  void setMaxHealth(int maxHealth) {
-		CivBase.maxHealth = maxHealth;
+		this.maxHealth = maxHealth;
 	}
 
 	
@@ -56,7 +56,7 @@ public abstract class CivBase {
 	}
 
 	public  void setPlayerX(int playerX) {
-		CivBase.playerX = playerX;
+		this.playerX = playerX;
 	}
 
 	public  int getPlayerY() {
@@ -64,7 +64,7 @@ public abstract class CivBase {
 	}
 
 	public  void setPlayerY(int playerY) {
-		CivBase.playerY = playerY;
+		this.playerY = playerY;
 	}
 
 	public  int getPlayerHealth() {
@@ -72,7 +72,7 @@ public abstract class CivBase {
 	}
 
 	public  void setPlayerHealth(int playerHealth) {
-		CivBase.playerHealth = playerHealth;
+		this.playerHealth = playerHealth;
 	}
 
 	public  int getPlayerSpeed() {
@@ -80,7 +80,7 @@ public abstract class CivBase {
 	}
 
 	public void setPlayerSpeed(int playerSpeed) {
-		CivBase.playerSpeed = playerSpeed;
+		this.playerSpeed = playerSpeed;
 	}
 
 	public  boolean isCanMove() {
@@ -88,7 +88,7 @@ public abstract class CivBase {
 	}
 
 	public  void setCanMove(boolean canMove) {
-		CivBase.canMove = canMove;
+		this.canMove = canMove;
 	}
 
 	public  boolean isHurt() {
@@ -96,7 +96,7 @@ public abstract class CivBase {
 	}
 
 	public  void setHurt(boolean isHurt) {
-		CivBase.isHurt = isHurt;
+		this.isHurt = isHurt;
 	}
 
 	public  boolean isGodMode() {
@@ -104,7 +104,7 @@ public abstract class CivBase {
 	}
 
 	public  void setGodMode(boolean isGodMode) {
-		CivBase.isGodMode = isGodMode;
+		this.isGodMode = isGodMode;
 	}
 
 	public  String getRace() {
@@ -112,7 +112,7 @@ public abstract class CivBase {
 	}
 
 	public  void setRace(String race) {
-		CivBase.race = race;
+		this.race = race;
 	}
 
 	public  String getPlayerName() {
@@ -120,7 +120,7 @@ public abstract class CivBase {
 	}
 
 	public  void setPlayerName(String playerName) {
-		CivBase.playerName = playerName;
+		this.playerName = playerName;
 	}
 	public abstract void moveUp();
 	public abstract void moveDown();

@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package net.thesahara.game.player.Clothes;
+
+/**
+ *The Sahara - ClothesBase.java
+ *@author Greg
+ *
+ */
+public class ClothesBase {
+
+}

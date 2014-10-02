@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package net.thesahara.game.player.Clothes;
+
+import org.newdawn.slick.opengl.Texture;
+
+/**
+ *The Sahara - GeneralClothes.java
+ *@author Greg
+ *
+ */
+public class GeneralClothes extends ClothesBase{
+
+	/**
+	 * @param name
+	 * @param texture
+	 */
+	public GeneralClothes(String name, Texture texture) {
+		super(name, texture);
+		// TODO Auto-generated constructor stub
+	}
+
+}

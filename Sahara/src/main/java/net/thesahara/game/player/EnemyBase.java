@@ -10,18 +10,18 @@ package net.thesahara.game.player;
  */
 public abstract class EnemyBase {
 	
-	public static int playerX;
-	public static int playerY;
-	public static int playerHealth;
-	public static int playerSpeed;
-	public static boolean canMove;
-	public static boolean isHurt;
-	public static boolean isGodMode;
-	public static String race;
-	public static String playerName;
-	public static int maxHealth;
-	public static boolean isDead;
-	public static int direction;
+	public  int playerX;
+	public  int playerY;
+	public  int playerHealth;
+	public  int playerSpeed;
+	public  boolean canMove;
+	public  boolean isHurt;
+	public  boolean isGodMode;
+	public  String race;
+	public  String playerName;
+	public  int maxHealth;
+	public  boolean isDead;
+	public  int direction;
 	
 	public int getDirection() {
 		return direction;
@@ -30,7 +30,7 @@ public abstract class EnemyBase {
 
 
 	public void setDirection(int direction) {
-		EnemyBase.direction = direction;
+		this.direction = direction;
 	}
 
 
@@ -48,7 +48,7 @@ public abstract class EnemyBase {
 
 
 	public  void setDead(boolean isDead) {
-		EnemyBase.isDead = isDead;
+		this.isDead = isDead;
 	}
 
 
@@ -58,7 +58,7 @@ public abstract class EnemyBase {
 	}
 
 	public  void setMaxHealth(int maxHealth) {
-		EnemyBase.maxHealth = maxHealth;
+		this.maxHealth = maxHealth;
 	}
 
 	
@@ -68,7 +68,7 @@ public abstract class EnemyBase {
 	}
 
 	public  void setPlayerX(int playerX) {
-		EnemyBase.playerX = playerX;
+		this.playerX = playerX;
 	}
 
 	public  int getPlayerY() {
@@ -76,7 +76,7 @@ public abstract class EnemyBase {
 	}
 
 	public  void setPlayerY(int playerY) {
-		EnemyBase.playerY = playerY;
+		this.playerY = playerY;
 	}
 
 	public  int getPlayerHealth() {
@@ -84,7 +84,7 @@ public abstract class EnemyBase {
 	}
 
 	public  void setPlayerHealth(int playerHealth) {
-		EnemyBase.playerHealth = playerHealth;
+		this.playerHealth = playerHealth;
 	}
 
 	public  int getPlayerSpeed() {
@@ -92,7 +92,7 @@ public abstract class EnemyBase {
 	}
 
 	public void setPlayerSpeed(int playerSpeed) {
-		EnemyBase.playerSpeed = playerSpeed;
+		this.playerSpeed = playerSpeed;
 	}
 
 	public  boolean isCanMove() {
@@ -100,7 +100,7 @@ public abstract class EnemyBase {
 	}
 
 	public  void setCanMove(boolean canMove) {
-		EnemyBase.canMove = canMove;
+		this.canMove = canMove;
 	}
 
 	public  boolean isHurt() {
@@ -108,7 +108,7 @@ public abstract class EnemyBase {
 	}
 
 	public  void setHurt(boolean isHurt) {
-		EnemyBase.isHurt = isHurt;
+		this.isHurt = isHurt;
 	}
 
 	public  boolean isGodMode() {
@@ -116,7 +116,7 @@ public abstract class EnemyBase {
 	}
 
 	public  void setGodMode(boolean isGodMode) {
-		EnemyBase.isGodMode = isGodMode;
+		this.isGodMode = isGodMode;
 	}
 
 	public  String getRace() {
@@ -124,7 +124,7 @@ public abstract class EnemyBase {
 	}
 
 	public  void setRace(String race) {
-		EnemyBase.race = race;
+		this.race = race;
 	}
 
 	public  String getPlayerName() {
@@ -132,7 +132,7 @@ public abstract class EnemyBase {
 	}
 
 	public  void setPlayerName(String playerName) {
-		EnemyBase.playerName = playerName;
+		this.playerName = playerName;
 	}
 	public abstract void moveUp();
 	public abstract void moveDown();

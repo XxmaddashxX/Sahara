@@ -21,7 +21,7 @@ public class TextureStorage {
 	public static Texture icon;
 	
 	public static Texture splash_START_Texture;
-	
+	public static Texture clothes_trousers_white;
 	
 	public static void loadTextures(){
 		test_Texture = TextureHandler.loadTexture("programIcon", "PNG");
@@ -31,6 +31,7 @@ public class TextureStorage {
 		balkoose_pur_clothed = TextureHandler.loadTexture("Balkoose_purple", "PNG");
 		icon = TextureHandler.loadTexture("Drifitng_Collosus_icon", "PNG");
 		balkoose_smuggler = TextureHandler.loadTexture("Balkoose_smuggler", "PNG");
+		clothes_trousers_white = TextureHandler.loadTexture("trousers_white", "PNG");
 		//Splashes
 		//splash_START_Texture = TextureHandler.loadTexture("splahes", "splash_START", "PNG");
 	}
