@@ -139,6 +139,8 @@ public class Sahara {
 				player.setDirection(0);
 			}
 			if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
+				Shooting.setDir(player);
+				Shooting.isVisible = true;
 				
 				
 			}

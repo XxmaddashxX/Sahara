@@ -12,18 +12,18 @@ import net.thesahara.game.player.Player;
  */
 public class Shooting {
 	private static int log;
-	public String name;
-	public int posx, posy;
-	public int dir;
-	public boolean isVisible;
+	public static String name;
+	public static int posx, posy;
+	public static int dir;
+	public static boolean isVisible;
 	public Shooting(String name){
 		this.name = name;
 		
 	}
-	public  void setDir(Player player){
+	public static void setDir(Player player){
 		dir = player.getDirection();
 	}
-	public  void fire(Player player){
+	public static void fire(Player player){
 		if(log == 0){
 			posx = player.getPlayerX();
 			posy = player.getPlayerY();

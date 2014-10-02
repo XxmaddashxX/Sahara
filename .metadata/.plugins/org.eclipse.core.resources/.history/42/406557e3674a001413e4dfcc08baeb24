@@ -139,6 +139,8 @@ public class Sahara {
 				player.setDirection(0);
 			}
 			if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
+				Shooting.setDir(player);
+				Shooting.isVisible = true;
 				
 				
 			}
@@ -156,7 +158,9 @@ public class Sahara {
 		TextureHandler.drawTexture(TextureStorage.icon, enemy.getPlayerX(), enemy.getPlayerY());
 		TextureHandler.drawTexture(TextureStorage.balkoose_pur_naked, player.getPlayerX(), player.getPlayerY());
 		TextureHandler.drawTexture(TextureStorage.balkoose_smuggler, enemy2.getPlayerX(), enemy2.getPlayerY());
-		
+		if(Shooting.isVisible){
+			TextureHandler.drawTexture(TextureStorage.test_Texture, Shooting.posx, Shooting.posy);
+		}
 		TextHandler.drawString(font, 60, 60, ";D", Color.magenta);
 		ClothesHandler.drawClothes(player);
 		Display.update();
@@ -164,7 +168,9 @@ public class Sahara {
 	private static void update(){
 		civ.onUpdate();
 		enemy.onUpdate();
-		
+		if(Shooting.isVisible){
+			Shooting.fire(player);
+		}
 		enemy2.onUpdate();
 	}
 	private static void displaySplashs(){
