@@ -1,0 +1,64 @@
+/**
+ * 
+ */
+package net.thesahara.game.world;
+
+import net.thesahara.engine.render.TextureStorage;
+import net.thesahara.game.player.Player;
+
+import org.newdawn.slick.opengl.Texture;
+
+/**
+ *The Sahara - World.java
+ *@author Greg
+ *
+ */
+public class World {
+	public static String worldname;
+	private static Texture worldTexture;
+	public static boolean isRunning;
+	public static Player player;
+	public static int spawnx;
+	public static int spawny;
+	public World(String name, Texture texture){
+		this.isRunning = true;
+		this.worldTexture = texture;
+		this.worldname = name;
+	}
+	public static String getWorldname() {
+		return worldname;
+	}
+	public static Texture getWorldTexture() {
+		return worldTexture;
+	}
+	public static void worldStart(){
+		player = new Player("Test", TextureStorage.balkoose_pur_naked);
+		
+		
+		worldLoop();
+	}
+	public static void worldLoop(){
+		
+		while(isRunning){
+			input();
+			update();
+			render();
+		}
+		worldClose();
+		
+	}
+	public static void render(){
+		
+	}
+	public static void update(){
+		
+	}
+	public static void input(){
+		
+	}
+	public static void worldClose(){
+		
+	}
+	
+
+}

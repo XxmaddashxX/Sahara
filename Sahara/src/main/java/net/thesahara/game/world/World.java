@@ -3,6 +3,11 @@
  */
 package net.thesahara.game.world;
 
+//import java.util.Random;
+
+import net.thesahara.engine.render.TextureStorage;
+import net.thesahara.game.player.Player;
+
 import org.newdawn.slick.opengl.Texture;
 
 /**
@@ -11,26 +16,35 @@ import org.newdawn.slick.opengl.Texture;
  *
  */
 public class World {
-	public static String worldname;
-	private static Texture worldTexture;
-	public static boolean isRunning;
+	public  String worldname;
+	private Texture worldTexture;
+	public  boolean isRunning;
+	public  Player player;
+	public  int spawnx;
+	public  int spawny;
+	//private  Random rand = new Random();
 	public World(String name, Texture texture){
 		this.isRunning = true;
 		this.worldTexture = texture;
 		this.worldname = name;
 	}
-	public static String getWorldname() {
+	public World(String preload){
+		this.isRunning = true;
+		
+	}
+	public  String getWorldname() {
 		return worldname;
 	}
-	public static Texture getWorldTexture() {
+	public  Texture getWorldTexture() {
 		return worldTexture;
 	}
-	public static void worldStart(){
+	public  void worldStart(){
+		player = new Player("Test", TextureStorage.balkoose_pur_naked);
 		
 		
 		worldLoop();
 	}
-	public static void worldLoop(){
+	public  void worldLoop(){
 		
 		while(isRunning){
 			input();
@@ -40,16 +54,16 @@ public class World {
 		worldClose();
 		
 	}
-	public static void render(){
+	public  void render(){
 		
 	}
-	public static void update(){
+	public  void update(){
 		
 	}
-	public static void input(){
+	public  void input(){
 		
 	}
-	public static void worldClose(){
+	public  void worldClose(){
 		
 	}
 	

@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package net.thesahara.game.logic;
+
+/**
+ *The Sahara - TimeHandler.java
+ *@author Greg
+ *
+ */
+
+public class TimeHandler {
+	public int time;
+	public String timecode;
+	public static void setTime(int amt){
+		time = time + amt;
+		if(time > 1440){
+			this.timecode = "AM";
+			time = time - 1440;
+			return;
+		}
+		if(time >= 720){
+			this.timecode = "PM";
+			return;
+		}
+	}
+	
+	
+}

@@ -17,7 +17,7 @@ public class Main{
 	
 		
 		Sahara sahara = new Sahara();
-		Sahara.start();
+		sahara.start();
 		
 		
 	}

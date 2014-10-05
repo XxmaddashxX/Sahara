@@ -3,6 +3,8 @@
  */
 package net.thesahara.game.player;
 
+import java.awt.Rectangle;
+
 import net.thesahara.engine.render.TextureStorage;
 import net.thesahara.game.player.Clothes.GeneralClothes;
 
@@ -17,6 +19,7 @@ import org.newdawn.slick.opengl.Texture;
 public class Player extends PlayerBase{
 	public int textwidth;
 	public int textheight;
+	public Rectangle rect;
 	public Player(String name, Texture texture){
 		this.setPlayerName(name);
 		this.setPlayerHealth(100);
@@ -24,6 +27,7 @@ public class Player extends PlayerBase{
 		this.textheight = texture.getImageHeight();
 		this.textwidth = texture.getImageWidth();
 		this.setClothesbottom(new GeneralClothes("trousers_white", TextureStorage.clothes_trousers_white));
+		
 	}
 
 
@@ -84,7 +88,7 @@ public class Player extends PlayerBase{
 			this.setDead(true);
 			this.setCanMove(false);
 		}
-
+		
 	}
 
 }

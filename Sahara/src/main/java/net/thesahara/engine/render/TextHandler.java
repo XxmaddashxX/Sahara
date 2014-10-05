@@ -27,6 +27,14 @@ public class TextHandler {
 	public static void drawString(TrueTypeFont font, int x, int y, String text,  Color color){
 		font.drawString(x, y, text, color);
 	}
+	public static void drawInteger(TrueTypeFont font, int x, int y, int text,  Color color){
+		String j = Integer.toString(text);
+		
+		
+		font.drawString(x, y, j, color);
+	}
+	
+	
 	
 	
 	

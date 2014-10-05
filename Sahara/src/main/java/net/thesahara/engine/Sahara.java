@@ -26,6 +26,8 @@ import net.thesahara.engine.util.TextureHandler;
 import net.thesahara.game.SaharaProps;
 import net.thesahara.game.logic.ClothesHandler;
 import net.thesahara.game.logic.NameGenerator;
+import net.thesahara.game.logic.Time;
+import net.thesahara.game.logic.TimeHandler;
 import net.thesahara.game.player.Civilian;
 import net.thesahara.game.player.Enemy;
 import net.thesahara.game.player.Player;
@@ -46,18 +48,19 @@ import org.newdawn.slick.TrueTypeFont;
  */
 public class Sahara {
 	public static Civilian civ;
-	public static Player player;
+	public static  Player player;
 	public static Enemy enemy;
 	public static Enemy enemy2;
 	public static boolean testing;
 	public static Shooting shoot;
 	public static TrueTypeFont font;
+	
 	public static int i;
 	public Sahara(){
 		 i = 0;
 	}
 	
-	public static void start() {
+	public void start() {
 		try {
 			IConsole.printStartDetails();
 			Display.setDisplayMode(new DisplayMode(800,600));
@@ -78,7 +81,7 @@ public class Sahara {
 		displaySplashs();
 		font = TextHandler.loadFont(TextHandler.TIMESNEWROMAN, 24);
 		civ = new Civilian("t", TextureStorage.balkoose_pur_naked);
-		shoot = new Shooting("y");
+		
 		civ.setPlayerX(50);
 		civ.setPlayerY(50);
 		player = new Player("Test", TextureStorage.balkoose_pur_clothed);
@@ -91,7 +94,9 @@ public class Sahara {
 		enemy2 = new Enemy("bob2", TextureStorage.balkoose_smuggler, player);
 		enemy2.setPlayerX(400);
 		enemy2.setPlayerY(400);
+		
 		System.out.println(NameGenerator.getName("Balkoose"));
+		new Thread(new Time()).start();
 		while (!Display.isCloseRequested()) {
 			
 			input();
@@ -139,8 +144,8 @@ public class Sahara {
 				player.setDirection(0);
 			}
 			if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
-				
-				
+				Shooting shoot = new Shooting();
+				shoot.fire(player);
 			}
 			
 			
@@ -156,8 +161,9 @@ public class Sahara {
 		TextureHandler.drawTexture(TextureStorage.icon, enemy.getPlayerX(), enemy.getPlayerY());
 		TextureHandler.drawTexture(TextureStorage.balkoose_pur_naked, player.getPlayerX(), player.getPlayerY());
 		TextureHandler.drawTexture(TextureStorage.balkoose_smuggler, enemy2.getPlayerX(), enemy2.getPlayerY());
-		
+		TextHandler.drawString(font, 300, 300, TimeHandler.hour + ":" + TimeHandler.getDis() + TimeHandler.time, Color.magenta);
 		TextHandler.drawString(font, 60, 60, ";D", Color.magenta);
+		TextHandler.drawString(font, 380, 300, TimeHandler.getTimeCode(), Color.magenta);
 		ClothesHandler.drawClothes(player);
 		Display.update();
 	}

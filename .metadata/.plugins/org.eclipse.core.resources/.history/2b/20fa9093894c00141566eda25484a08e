@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package net.thesahara.game.logic;
+
+/**
+ *The Sahara - TimeHandler.java
+ *@author Greg
+ *
+ */
+
+public class TimeHandler {
+	public int time;
+	public static String timecode;
+	public void setTime(int amt){
+		time = time + amt;
+	}
+	
+	
+}

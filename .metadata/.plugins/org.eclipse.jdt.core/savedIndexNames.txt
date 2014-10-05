@@ -1,7 +1,6 @@
 INDEX VERSION 1.127+C:\Users\Greg\Desktop\GameDev\The Sahara\Sahara.git\.metadata\.plugins\org.eclipse.jdt.core
 1299022128.index
 4155206848.index
-3345632344.index
 305854171.index
 1115467115.index
 30765161.index

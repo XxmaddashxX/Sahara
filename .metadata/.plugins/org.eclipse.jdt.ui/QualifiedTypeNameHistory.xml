@@ -17,10 +17,8 @@
 <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
 <fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
 <fullyQualifiedTypeName name="net.thesahara.game.player.Player"/>
-<fullyQualifiedTypeName name="net.thesahara.engine.util.TextureHandler"/>
 <fullyQualifiedTypeName name="net.thesahara.game.player.Enemy"/>
 <fullyQualifiedTypeName name="net.thesahara.game.logic.LineOfSight"/>
-<fullyQualifiedTypeName name="net.thesahara.engine.render.TextureStorage"/>
 <fullyQualifiedTypeName name="net.thesahara.game.logic.threads.ShootingThread"/>
 <fullyQualifiedTypeName name="net.thesahara.engine.Sahara"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
@@ -34,4 +32,8 @@
 <fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.openal.AudioLoader"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.util.ResourceLoader"/>
+<fullyQualifiedTypeName name="net.thesahara.engine.render.TextureStorage"/>
+<fullyQualifiedTypeName name="net.thesahara.game.player.Clothes.GeneralClothes"/>
+<fullyQualifiedTypeName name="net.thesahara.engine.util.TextureHandler"/>
+<fullyQualifiedTypeName name="net.thesahara.game.logic.ClothesHandler"/>
 </qualifiedTypeNameHistroy>

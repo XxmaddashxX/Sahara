@@ -3,7 +3,10 @@
  */
 package net.thesahara.engine;
 
+import net.thesahara.engine.util.TextureHandler;
 import net.thesahara.game.player.Player;
+
+import org.newdawn.slick.opengl.Texture;
 
 /**
  *The Sahara - Shooting.java
@@ -11,19 +14,20 @@ import net.thesahara.game.player.Player;
  *
  */
 public class Shooting {
-	private static int log;
+	private  int log;
 	public String name;
-	public int posx, posy;
-	public int dir;
-	public boolean isVisible;
-	public Shooting(String name){
-		this.name = name;
+	public  int posx;
+	public  int posy;
+	public  int dir;
+	public static boolean isVisible;
+	public Shooting(){
+		
 		
 	}
 	public  void setDir(Player player){
 		dir = player.getDirection();
 	}
-	public  void fire(Player player){
+	public   void fire(Player player){
 		if(log == 0){
 			posx = player.getPlayerX();
 			posy = player.getPlayerY();
@@ -57,6 +61,12 @@ public class Shooting {
 			log = 0;
 			isVisible = false;
 		}
+		drawShot();
+		
+	}
+	public void drawShot(){
+		Texture temp = TextureHandler.loadTexture("programicon", "PNG");
+		TextureHandler.drawTexture(temp, posx, posy);
 		
 	}
 

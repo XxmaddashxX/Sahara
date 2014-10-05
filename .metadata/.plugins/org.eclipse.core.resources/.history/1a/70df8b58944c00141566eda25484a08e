@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package net.thesahara.game.logic;
+
+/**
+ *The Sahara - Time.java
+ *@author Greg
+ *
+ */
+public class Time implements Runnable{
+
+	public static void main(String args[]){
+		new Thread(new Time()).start();
+	}
+	
+	
+	@Override
+	public void run() {
+		
+	}
+
+
+	
+
+
+	
+
+}

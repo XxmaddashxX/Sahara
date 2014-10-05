@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package net.thesahara.game.logic;
+
+/**
+ *The Sahara - ShootingThread.java
+ *@author Greg
+ *
+ */
+public class ShootingThread {
+
+}
