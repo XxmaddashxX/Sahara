@@ -23,7 +23,7 @@ public class TextureStorage {
 	public static Texture splash_START_Texture;
 	public static Texture clothes_trousers_white;
 	
-	public static  void loadTextures(){
+	public static void loadTextures(){
 		test_Texture = TextureHandler.loadTexture("programIcon", "PNG");
 		//test2 = TextureHandler.loadTexture("test2", "PNG");
 		test3 = TextureHandler.loadTexture("test2_Texture", "PNG");
